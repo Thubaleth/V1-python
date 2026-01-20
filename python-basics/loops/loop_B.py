@@ -35,3 +35,69 @@ def sum_up_to(max_num):
 
 
 sum_up_to(4)
+#=================================================================================================
+
+# Write a function `no_ohs(text)` that prints each character of the string except 'o'.
+# The function does not return a value, just prints.
+
+# Example:
+# no_ohs("code")
+# c
+# d
+# e
+
+def no_ohs(text):
+    for i in range(len(text)):
+        if text[i] == 'o':
+            continue
+        else:
+        
+         print(text[i])
+
+no_ohs('codoe')
+
+
+# Write a function `odd_sum(max_num)` that returns the sum of all odd numbers
+# from 1 to max_num inclusive.
+
+# Example:
+#odd_sum(10) #-> 25  # 1 + 3 + 5 + 7 + 9
+#odd_sum(5)  #-> 9   # 1 + 3 + 5
+
+def odd_sum(max_num):
+    sum = 0
+    for i in range(1,max_num+1):
+        if i % 2 == 1:
+            sum += i
+
+    return sum
+
+print(odd_sum(10))
+
+
+#========================================================================================
+# Write a function `string_repeater(text, n)` that returns a new string
+# consisting of `text` repeated `n` times.
+
+# Example:
+#string_repeater("q", 4)  #-> 'qqqq'
+#string_repeater("go", 2) #-> 'gogo'
+#string_repeater("tac", 3) #-> 'tactactac'
+
+def string_repeater(text, n):
+   print(text*n)
+
+string_repeater("go",2)
+
+
+
+
+
+
+
+
+
+
+
+
+
