@@ -90,6 +90,57 @@ def string_repeater(text, n):
 string_repeater("go",2)
 
 
+#========================================================================================
+# Write a function `product_up_to(max_num)` that returns the product of all numbers
+# from 1 to max_num inclusive. (1*2*3*...*max_num)
+
+# Example:
+#product_up_to(4) #-> 24
+#product_up_to(5) #-> 120
+#product_up_to(7) #-> 5040
+
+def product_up_to(max_num):
+    total = 1
+    for i in range(1,max_num+1):
+        total *= i
+
+    return total
+
+print(product_up_to(4))
+
+
+
+#=============================================================================================
+
+# Write a function `div_by_either(num1, num2, max_num)` that prints all positive numbers
+# less than max_num that are divisible by num1 or num2.
+# The function does not return a value, just prints.
+
+# Example:
+#div_by_either(4, 3, 16)
+# 3
+# 4
+# 6
+# 8
+# 9
+# 12
+# 15
+
+
+def div_by_either(num1, num2, max_num):
+    for num in range(1, max_num):
+        if num % num1 == 0 or num % num2 == 0:
+            print(num)
+
+div_by_either(4, 3, 16)
+
+
+        
+    
+
+
+
+
 
 
 
