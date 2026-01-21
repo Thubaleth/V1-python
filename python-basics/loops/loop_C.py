@@ -48,3 +48,45 @@ def reverse_iterate(text):
         print(text[i])
 
 reverse_iterate("carrot")
+
+#===============================================
+# Write a function `remove_capitals(text)` that returns a new string with all
+# capital letters removed.
+
+# Example:
+#remove_capitals("fOrEver")     #-> 'frver'
+#remove_capitals("raiNCoat")    #-> 'raioat'
+#remove_capitals("cElLAr Door") #-> 'clr oor'
+
+
+def remove_capitals(text):
+    result = ""
+
+    for char in text:
+        if char.isupper():
+            result += ""
+        else:
+            result += char
+
+    return result
+
+print(remove_capitals("heLlo"))
+
+
+#===========================================================================================
+# Write a function `raise_power(base, exponent)` that returns the result of
+# base raised to the exponent using loops (do not use ** operator or math.pow).
+
+# Example:
+#raise_power(2, 5)  #-> 32
+#raise_power(4, 3)  #-> 64
+#raise_power(10, 4) #-> 10000
+#raise_power(7, 2)  #-> 49
+
+def raise_power(base, exponent):
+
+    result = 1
+    for i in range(exponent):
+        result *= base
+    return result
+
