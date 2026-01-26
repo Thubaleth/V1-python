@@ -83,3 +83,49 @@ def choose_divisibles(numbers, target):
 
 
 print(choose_divisibles([9, 33, 8, 17], 3))
+
+#======================================================================================
+# Write a function `maximum(numbers)` that accepts a list of numbers.
+# The function should return the largest number in the list.
+# If the list is empty, return None.
+
+# Example:
+# maximum([5, 6, 3, 7]) -> 7
+# maximum([17, 15, 19, 11, 2]) -> 19
+# maximum([]) -> None
+
+def maximum(numbers):
+    if len(numbers) == 0:
+         return None
+    max_number = numbers[0]
+    for number in numbers:
+        
+        if number > max_number:
+            max_number = number
+    
+    return max_number
+
+print(maximum([5, 6, 3, 7]))
+
+
+#=====================================================================================
+# Write a function `word_count(sentence, target_words)` that accepts a sentence string and a list of target words.
+# The function should return a count of how many words in the sentence are also in target_words.
+
+# Example:
+# word_count("open the window please", ["please", "open", "sorry"]) -> 2
+# word_count("drive to the cinema", ["the", "driver"]) -> 1
+# word_count("can I have that can", ["can", "I"]) -> 3\
+
+
+def word_count(sentence, target_words):
+    cnt = 0
+    l1 = sentence.split()
+    for word in target_words:
+
+        if word in l1:
+            cnt += 1
+    
+    return cnt
+
+print(word_count("drive to the cinema", ["the", "driver"] ))
