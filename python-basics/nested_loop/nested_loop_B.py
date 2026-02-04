@@ -7,6 +7,13 @@ def print2d(matrix):
         for j in i:
             print(j)
 
+array1 = [
+    ["a", "b", "c", "d"],
+    ["e", "f"],
+    ["g", "h", "i"]
+]
+
+print2d(array1)
 # Write a function `make_matrix(m, n, value)` that returns a 2D list of m rows and n columns
 # filled with `value`.
 
@@ -25,7 +32,7 @@ def make_matrix(m, n, value):
     
     return matrix
     
-print(make_matrix(3, 5, None))
+print(make_matrix(4, 2, "x"))
 #==========================================================
 # Write a function `total_product(matrix)` that returns the product of all numbers in a 2D list.
 

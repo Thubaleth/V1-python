@@ -12,9 +12,12 @@
 # carrot - daikon
 
 def pair_print(arr):
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            print(f"{arr[i]} - {arr[j]}")
+   for i in range(len(arr)):
+       for x in range(i+1,len(arr)):
+           print(f'{arr[i]} -{arr[x]}')
+
+pair_print(["artichoke", "broccoli", "carrot", "daikon"])
+       
 
 #=========================================================================================
 # Write a function `print_combinations(arr1, arr2)` that accepts two lists.
@@ -34,9 +37,13 @@ def pair_print(arr):
 # cyan flannel
 
 def print_combinations(arr1, arr2):
-    for item1 in arr1:
-        for item2 in arr2:
-            print(f"{item1} {item2}")
+    for i in arr1:
+        for x in arr2:
+            print(f'{i}  {x}')
+
+colors = ["gray", "cream", "cyan"]
+clothes = ["shirt", "flannel"]
+print_combinations(colors, clothes)
 
 
 # Write a function `two_sum(numbers, target)` that accepts a list of numbers and a target number.

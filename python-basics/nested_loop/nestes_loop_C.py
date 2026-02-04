@@ -50,8 +50,15 @@ print(remove_vowels("cellar door"))  # 'cllr dr'
 # the specified number of times, separated by spaces.
 
 
-def pam(pairs):
-   
+def spam(pairs):
+    result = []
+
+    for word, count in pairs:
+        result.extend([word] * count)
+
+    return " ".join(result)
+
+
 
 # Example usage:
 array1 = [["hi", 3], ["bye", 2]]
@@ -59,4 +66,22 @@ print(spam(array1))  # 'hi hi hi bye bye'
 
 array2 = [["cat", 1], ["dog", 2], ["bird", 4]]
 print(spam(array2))  # 'cat dog dog bird bird bird bird'
+
+
+
+#===================================================================================================
+
+# Write a function `remove_first_vowel(s)` that accepts a string and returns the string
+# with its first vowel removed.
+
+
+         
+      
+      
+
+# Example usage:
+
+print(remove_first_vowel("volcano"))  # 'vlcano'
+print(remove_first_vowel("celery"))  # 'clery'
+print(remove_first_vowel("juice"))  # 'jice'
 
