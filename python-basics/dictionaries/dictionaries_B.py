@@ -61,3 +61,86 @@ print(letter_map("colossal", {"o":"x","s":"p" }))
 print(letter_map("miniscule", {"u":"t","i":"f","e":"q" }))
 # 'mfnfsctlq'
 
+#====================================================================================
+"""
+Write a function `most_common_letter` that accepts a string as an argument.
+
+The function should return the character that appears **most frequently** in the string.
+
+You may assume:
+
+- There are **no ties**
+- The string contains only lowercase letters
+
+"""
+
+def most_common_letter(str):
+    max_letter = ""
+    max_num = 0
+
+
+    for ch in str:
+        count = str.count(ch)
+        if count > max_num:
+            max_num = count
+            max_letter = ch
+        
+    return max_letter
+
+    
+
+print(most_common_letter("building"))
+# 'i'
+
+print(most_common_letter("shoestring"))
+# 's'
+
+print(most_common_letter("preparedness"))
+# 'e'
+
+#=================================================================================================
+"""
+Write a function `word_replace` that accepts:
+
+- a sentence string
+- a dictionary
+
+The function should return a new sentence where words that appear as keys in the dictionary are replaced with their corresponding values.
+"""
+
+def  word_replace(sentence,dict):
+    new_sentence = sentence.split()
+    new_list = []
+    for word in new_sentence:
+
+        if word in dict:
+            new_list.append(dict[word])
+        
+        else:
+            new_list.append(word)
+        
+    return " ".join(new_list)
+
+    
+
+
+
+
+print(word_replace(
+"I never take naps during the day",
+    {"never":"always","day":"weekend" }
+))
+# 'I always take naps during the weekend'
+
+print(word_replace(
+"the park is closed",
+    {"closed":"open","the":"a" }
+))
+# 'a park is open'
+
+print(word_replace(
+"I do what I want",
+    {"I":"we","cat":"dog" }
+))
+# 'we do what we want'
+
