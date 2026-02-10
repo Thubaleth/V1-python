@@ -100,12 +100,24 @@ Rules:
 - Return a **new dictionary**
 """
 
-def object_add(dict_1,dict_2):
-    add = 0
-    for key,value in dict_1:
 
+def object_add(dict_1, dict_2):
+    new_dict = {}
+
+    
+    for key, value in dict_1.items():
         if key in dict_2:
-            pass
+            new_dict[key] = value + dict_2[key]
+        else:
+            new_dict[key] = value
+
+    
+    for key, value in dict_2.items():
+        if key not in new_dict:
+            new_dict[key] = value
+
+    return new_dict
+
 
 
 
@@ -122,3 +134,36 @@ obj4 = {"b":5,"c":1,"e":4 }
 print(object_add(obj3, obj4))
 # { "a": 3, "b": 7, "c": 0, "e": 4 }
 
+#==================================================================================
+"""
+
+Write a function `secret_cipher` that accepts:
+
+- a string
+- a dictionary (cipher map)
+
+Rules:
+
+- Replace each character in the string with its corresponding value from the dictionary
+- If a character does **not** exist as a key in the dictionary, replace it with `"?"`
+- Return the resulting string
+
+"""
+
+def secret_cipher(str,dict):
+    new_str = ""
+    for ch in str:
+        if ch in dict:
+           new_str += dict[ch]
+        elif ch not in dict:
+            new_str += "?"
+        
+    return new_str
+
+
+
+print(secret_cipher("jello", {"j":"r","l":"s","e":"i" }))
+# 'riss?'
+
+print(secret_cipher("lantern", {"e":"o","l":"p","n":"m","r":"j" }))
+# 'p?m?ojm'
