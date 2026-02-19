@@ -6,11 +6,11 @@
 
 def pick_perfect_squares(numbers):
     
-    for i in range(len(numbers)):
+    for number in numbers:
         
         perfect_sqaure = []
-        if int(i * 0.5) ** 2 ==  numbers[i]:
-            perfect_sqaure.append(numbers[i])
+        if int(number * 0.5) ** 2 ==  numbers:
+            perfect_sqaure.append(number)
         
     return perfect_sqaure
             
